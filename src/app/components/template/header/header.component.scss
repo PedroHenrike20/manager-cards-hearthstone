@@ -1,0 +1,43 @@
+$primary-color: #fcd144;
+
+.header {
+  background-image: url("../../../../assets/img/header.png");
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header button i {
+  color: $primary-color;
+}
+
+.play_button {
+  height: 45px;
+  border-radius: 0px;
+  box-shadow: none;
+  padding: 1em 2.3em;
+  border-bottom: 4px solid rgb(76, 13, 122);
+  transition: none 0s ease 0s;
+  right: 3px;
+  background-image: linear-gradient(
+    90deg,
+    rgb(76, 13, 122) 0%,
+    rgb(188, 34, 199) 36%,
+    rgb(188, 34, 199) 63%,
+    rgb(76, 13, 122) 100%
+  );
+}
+
+.logo {
+  max-width: 180px;
+}
+
+.play_button a {
+  font-size: 0.8rem;
+  color: #eee;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-shadow: -1px -1px 0px #000, -1px 1px 0px #000, 1px -1px 0px #000,
+    1px 0px 0px #000;
+}

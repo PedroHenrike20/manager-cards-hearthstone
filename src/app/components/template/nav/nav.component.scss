@@ -1,0 +1,29 @@
+$primary-color: #fcd144;
+
+.sidenav {
+  background-image: url("../../../../assets/img/nav.png");
+  width: 250px;
+}
+
+.container {
+  height: 100%;
+}
+
+.label {
+  color: $primary-color;
+  font-weight: 500;
+}
+
+.sidenav i {
+  vertical-align: middle;
+  color: $primary-color;
+}
+
+.sidenav i {
+  padding-right: 15px;
+}
+
+.content {
+  padding: 16px;
+  background-color: #fff;
+}

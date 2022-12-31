@@ -1,0 +1,163 @@
+<mat-card class="container-button-nav mat-elevation-z3">
+  <div>
+    <mat-card-title class="title"> Gerenciar</mat-card-title>
+    <mat-card-subtitle class="subtitle"
+      >Monte sua carta agora mesmo!</mat-card-subtitle
+    >
+  </div>
+  <button
+    mat-raised-button
+    mat-raised-button
+    color="secondary"
+    (click)="handleListCards()"
+  >
+    Ver cartas
+  </button>
+</mat-card>
+
+<mat-card class="card-container mat-elevation-z4">
+  <mat-card class="card-model">
+    <img
+      src="../../../../assets/img/card/card_struct.png"
+      class="card-struct"
+    />
+    <span class="level"> {{ card.level }} </span>
+    <span class="attack"> {{ card.attack }} </span>
+    <span class="defense"> {{ card.defense }} </span>
+    <span class="description">{{ card.description }}</span>
+    <span class="title-card">
+      <svg
+        width="5cm"
+        height="5cm"
+        viewBox="0 0 450 450"
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+      >
+        <!-- to hide the path, it is usually wrapped in a <defs> element -->
+        <!-- <defs> -->
+        <!-- d="M50,300 Q800,0 1000,1000 T100" -->
+        <path
+          id="MyPath"
+          fill="none"
+          d="M200, 450 Q400,20 600, 120 T1000,300"
+        />
+        <!-- </defs> -->
+
+        <text>
+          <textPath href="#MyPath">
+            {{ card.name }}
+          </textPath>
+        </text>
+      </svg>
+    </span>
+    <img class="avatarCard" src="{{ card.avatarUrl }}" />
+  </mat-card>
+  <form>
+    <mat-form-field>
+      <mat-label>Nome</mat-label>
+      <input
+        autocomplete="off"
+        matInput
+        [(ngModel)]="card.name"
+        name="name"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Avatar URL</mat-label>
+      <input
+        matInput
+        autocomplete="off"
+        [(ngModel)]="card.avatarUrl"
+        name="avatarUrl"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Descrição</mat-label>
+      <textarea
+        required
+        autocomplete="off"
+        matInput
+        maxlength="100"
+        [(ngModel)]="card.description"
+        name="description"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Tipo</mat-label>
+      <select matNativeControl required name="type" [(ngModel)]="card.type">
+        <option value="criatura">Criatura</option>
+        <option value="magia">Magia</option>
+      </select>
+    </mat-form-field>
+    <div class="group-inputs-line">
+      <mat-form-field class="input-line">
+        <mat-label>Ataque</mat-label>
+        <input
+          matInput
+          autocomplete="off"
+          type="number"
+          pattern="/^-?\d+\.?\d*$/"
+          onKeyPress="if(this.value.length==2) return false;"
+          placeholder="Ataque"
+          [(ngModel)]="card.attack"
+          name="attack"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field class="input-line">
+        <mat-label>Defesa</mat-label>
+        <input
+          matInput
+          autocomplete="off"
+          placeholder="Defesa"
+          type="number"
+          pattern="/^-?\d+\.?\d*$/"
+          onKeyPress="if(this.value.length==2) return false;"
+          [(ngModel)]="card.defense"
+          name="defense"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field class="input-line">
+        <mat-label>Level</mat-label>
+        <input
+          matInput
+          autocomplete="off"
+          type="number"
+          pattern="/^-?\d+\.?\d*$/"
+          onKeyPress="if(this.value.length==2) return false;"
+          placeholder="Level"
+          [(ngModel)]="card.level"
+          name="level"
+          required
+        />
+      </mat-form-field>
+    </div>
+    <mat-form-field class="inputClass">
+      <mat-label>Classe</mat-label>
+      <select matNativeControl required name="class" [(ngModel)]="card.class">
+        <option value="caçador">Caçador</option>
+        <option value="druida">Druida</option>
+        <option value="mago">Mago</option>
+        <option value="paladino">Paladino</option>
+        <option value="outros">Outros</option>
+      </select>
+    </mat-form-field>
+
+    <div class="container-button">
+      <button
+        mat-raised-button
+        mat-raised-button
+        color="primary"
+        (click)="crateCard()"
+      >
+        Salvar
+      </button>
+      <button mat-raised-button mat-raised-button (click)="cancel()">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</mat-card>

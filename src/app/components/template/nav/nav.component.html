@@ -1,0 +1,21 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav class="sidenav" mode="side" opened fixedTopGap="64">
+    <mat-nav-list class="nav-list">
+      <!-- <a mat-list-item>
+        <i class="material-icons"> person </i>
+        <span class="label"> Meu perfil </span>
+      </a> -->
+      <a mat-list-item routerLink="">
+        <i class="material-icons"> shield </i>
+        <span class="label"> Inicio </span>
+      </a>
+      <a mat-list-item routerLink="/manager/card/create">
+        <i class="material-icons"> settings </i>
+        <span class="label"> Gerenciar </span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

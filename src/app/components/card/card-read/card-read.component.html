@@ -1,0 +1,101 @@
+<mat-card class="container-button-nav mat-elevation-z3">
+  <div>
+    <mat-card-title class="title"> Biblioteca de cartas</mat-card-title>
+    <mat-card-subtitle class="subtitle"
+      >Preparado para montar o seu deck?</mat-card-subtitle
+    >
+  </div>
+  <button
+    mat-raised-button
+    mat-raised-button
+    color="secondary"
+    (click)="handleCreateCard()"
+  >
+    Criar uma carta
+  </button>
+</mat-card>
+<mat-card class="container-filter mat-elevation-z3">
+  <div>
+    <mat-radio-group
+      [(ngModel)]="typeFilter"
+      aria-labelledby="Selecione um tipo de filtro"
+    >
+      <mat-radio-button value="id">Id</mat-radio-button>
+      <mat-radio-button value="name">Nome</mat-radio-button>
+      <mat-radio-button value="class">Classe</mat-radio-button>
+      <mat-radio-button value="type">Tipo</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div>
+    <mat-form-field class="input-line">
+      <input
+        matInput
+        autocomplete="off"
+        placeholder="Filtrar"
+        [(ngModel)]="filterValue"
+        name="filterValue"
+      />
+    </mat-form-field>
+    <button
+      mat-raised-button
+      mat-raised-button
+      color="primary"
+      class="button-filter"
+      (click)="getCardsFilter()"
+    >
+      Filtrar
+    </button>
+    <button
+      mat-raised-button
+      mat-raised-button
+      color="secondary"
+      class="button-filter"
+      (click)="cleanFilter()"
+    >
+      Limpar filtro
+    </button>
+  </div>
+</mat-card>
+
+<mat-card class="card-container mat-elevation-z9">
+  <span class="label-information-cards" *ngIf="cards.length <= 0"
+    >Nenhuma carta foi encontrada!</span
+  >
+  <mat-card *ngFor="let card of cards" class="card-model">
+    <a routerLink="/manager/card/update/{{ card.id }}">
+      <img
+        src="../../../../assets/img/card/card_struct.png"
+        class="card-struct"
+      />
+      <span class="level"> {{ card.level }} </span>
+      <span class="attack"> {{ card.attack }} </span>
+      <span class="defense"> {{ card.defense }} </span>
+      <span class="description">{{ card.description }}</span>
+      <span class="title-card">
+        <svg
+          width="5cm"
+          height="5cm"
+          viewBox="0 0 450 450"
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+        >
+          <!-- to hide the path, it is usually wrapped in a <defs> element -->
+          <!-- <defs> -->
+          <path
+            id="MyPath"
+            fill="none"
+            d="M200, 450 Q400,20 600, 120 T1000,300"
+          />
+          <!-- </defs> -->
+
+          <text>
+            <textPath href="#MyPath">
+              {{ card.name }}
+            </textPath>
+          </text>
+        </svg>
+      </span>
+      <img class="avatarCard" src="{{ card.avatarUrl }}" />
+    </a>
+  </mat-card>
+</mat-card>

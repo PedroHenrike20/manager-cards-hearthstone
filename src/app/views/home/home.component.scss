@@ -1,0 +1,28 @@
+.container {
+  width: 100%;
+  flex: 1;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.containerImage {
+  margin-top: 20px;
+}
+.imgHome {
+  max-height: 300px;
+  border-radius: 5px;
+}
+
+.logoHome {
+  max-width: 430px;
+  margin-bottom: 60px;
+}
+
+.labelHome {
+  font-size: 2.1rem;
+  font-style: italic;
+  font-weight: 900;
+  font-family: "belwe-bd-bt-bold";
+}
