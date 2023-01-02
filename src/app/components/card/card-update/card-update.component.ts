@@ -39,20 +39,20 @@ export class CardUpdateComponent implements OnInit {
     }
     this.cardService.update(this.card).subscribe(() => {
       this.cardService.showMessage('Carta atualizada com sucesso!');
-      this.router.navigate(['/manager/card/list']);
+      this.router.navigate(['/manager']);
     })
   }
 
   deleteCard(): void {
     this.cardService.delete(String(this.card.id)).subscribe(() => {
       this.cardService.showMessage('Carta removida com sucesso!');
-      this.router.navigate(['/manager/card/list']);
+      this.router.navigate(['/manager']);
 
     })
   }
 
   cancel(): void {
-    this.router.navigate(['/manager/card/list'])
+    this.router.navigate(['/manager'])
   }
 
 

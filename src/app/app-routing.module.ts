@@ -4,6 +4,7 @@ import { CardCreateComponent } from './components/card/card-create/card-create.c
 import { CardReadComponent } from './components/card/card-read/card-read.component';
 import { CardUpdateComponent } from './components/card/card-update/card-update.component';
 import { HomeComponent } from './views/home/home.component';
+import { ManagerComponent } from './views/manager/manager.component';
 
 const routes: Routes = [
 
@@ -12,16 +13,16 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: "manager/card/list",
-    component: CardReadComponent
-  },
-  {
     path: "manager/card/create",
     component: CardCreateComponent
   },
   {
     path: "manager/card/update/:id",
     component: CardUpdateComponent
+  },
+  {
+    path: "manager",
+    component: ManagerComponent
   }
 ];
 

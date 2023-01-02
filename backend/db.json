@@ -1,26 +1,26 @@
 {
   "cards": [
     {
-      "attack": 4,
-      "avatarUrl": "https://wallup.net/wp-content/uploads/2018/09/25/601055-Hearthstone_Heroes_of_Warcraft-Hearthstone_Kobolds_and_Catacombs-video_games.jpg",
-      "class": "caçador",
-      "defense": 4,
-      "description": "Ultimo suspiro: Assombrante card na sua mão",
-      "level": 4,
-      "name": "Pesadelo Assombrante 3.0",
-      "type": "criatura",
-      "id": 1
-    },
-    {
       "attack": 3,
       "avatarUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/9c392464324639.5ace5ed8361f3.jpg",
       "class": "paladino",
       "defense": 5,
       "description": "Escudo divino: cause 3 de dano ao seu heroi",
       "level": 5,
-      "name": "Selo de Sangue 4.0",
+      "name": "Selo de Sangue ",
       "type": "magia",
       "id": 2
+    },
+    {
+      "attack": 10,
+      "avatarUrl": "https://tse1.mm.bing.net/th?id=OIP.z_Onr7VcpKiZPRYc6xxfnAHaIC&pid=Api",
+      "class": "druida",
+      "defense": 7,
+      "description": "Muito forte",
+      "level": 99,
+      "name": "Poder da Selva",
+      "type": "magia",
+      "id": 3
     }
   ]
 }

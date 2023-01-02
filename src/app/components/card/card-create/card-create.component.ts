@@ -51,16 +51,16 @@ export class CardCreateComponent implements OnInit {
         const data = JSON.stringify(cards);
         localStorage.setItem('cards', data);
       })
-      this.router.navigate(['/manager/card/list'])
+      this.router.navigate(['/manager'])
 
     })
   }
 
   cancel(): void {
-    this.router.navigate([''])
+    this.router.navigate(['/manager'])
   }
 
   handleListCards(): void {
-    this.router.navigate(['/manager/card/list'])
+    this.router.navigate(['/manager'])
   }
 }
