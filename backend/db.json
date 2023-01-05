@@ -2,25 +2,14 @@
   "cards": [
     {
       "attack": 3,
-      "avatarUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/9c392464324639.5ace5ed8361f3.jpg",
-      "class": "paladino",
-      "defense": 5,
-      "description": "Escudo divino: cause 3 de dano ao seu heroi",
-      "level": 5,
-      "name": "Selo de Sangue ",
-      "type": "magia",
-      "id": 2
-    },
-    {
-      "attack": 10,
-      "avatarUrl": "https://tse1.mm.bing.net/th?id=OIP.z_Onr7VcpKiZPRYc6xxfnAHaIC&pid=Api",
-      "class": "druida",
-      "defense": 7,
-      "description": "Muito forte",
-      "level": 99,
-      "name": "Poder da Selva",
-      "type": "magia",
-      "id": 3
+      "avatarUrl": "https://vignette.wikia.nocookie.net/fairy-tail-fanfiction/images/3/36/Elemental_del_Dios_del_Agua.jpg/revision/latest?cb=20160308195627&path-prefix=es",
+      "class": "mago",
+      "defense": 6,
+      "description": "Congele qualquer personagem que receber dano desse lacaio.",
+      "level": 4,
+      "name": "Elemental da Água",
+      "type": "lacaio",
+      "id": 1
     }
   ]
 }
