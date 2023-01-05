@@ -37,8 +37,6 @@ export class CardReadComponent implements OnInit {
     if (!this.filterValue || !this.typeFilter) {
       return this.cardService.showMessage('Especifique as informações corretamente para filtrar')
     }
-    console.log(this.filterValue);
-    console.log(this.typeFilter);
 
     if (this.typeFilter === "name" || this.typeFilter === "id") {
 
